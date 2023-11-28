@@ -48,9 +48,10 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 
 ## Usage
 
-1. Copy and paste the puzzle boards into the `InputBoard()` function in `int main()` at the end of the code.
-2. Compile the program with C++11 `g++ -std=c++11 puzzleSolver.cpp -o puzzleSolver` in terminal.
-3. Run the compiled version. `./puzzleSolver`
+1. Clone the repository.
+2. Copy and paste the puzzle boards into the `InputBoard()` function in `int main()`.
+3. Compile the program with C++11 `g++ -std=c++11 puzzleSolver.cpp -o puzzleSolver` in terminal.
+4. Run the compiled version. `./puzzleSolver`
 
 ## Example Boards
 
