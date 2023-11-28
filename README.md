@@ -4,24 +4,37 @@
 
 This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizontal and vertical compartments. The input puzzle is represented as a string, and the solver follows a set of rules to fill in the compartments with uninterrupted numbers.
 
-## Puzzle Rules
+## Puzzle Syntax Explanation
 
 - Minus integers represent black cells with that integer.
 - Asterisk (*) denotes an empty cell, recorded as 99 during solving.
 - Zero (0) represents a black cell with no effect.
 - Compartments are formed by numbers between black cells and 0’s.
 
+## Puzzle Rules
+
+1. **Uninterrupted Compartments:**
+   - Compartments must contain an uninterrupted sequence of numbers.
+   - Sorting compartments should result in a continuous sequence.
+
+2. **Unordered Compartments:**
+   - Compartments can be arranged in any order.
+
+3. **Diagonal Uniqueness:**
+   - No two compartments within the same diagonal can have the same number.
+
+
 ## Solver Approach
 
 1. **Iterate through horizontal and vertical compartments:**
-   - Start with those already 30% completed.
+   - Start with compartments that has the least empty cell in it.
 
 2. **For each compartment:**
    - Check possible values.
    - Sort the compartment.
    - Perform diagonal check on possibilities.
    - Record possible values for each index.
-   - Choose a random value from the possibilities.
+   - Choose a random set from the possibilities.
 
 3. **Record changes:**
    - Compartment, index, value, and step.
@@ -30,14 +43,14 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
    - If completion affects another compartment, check its interruption.
 
 5. **Backtrack if needed:**
-   - Identify the cause of being stuck.
-   - Check the same row or column for an alternative possibility.
+   - Backtrack to the last step in history and pick a different possibility for compartment.
+   - Move on and repeat if needed.
 
 ## Usage
 
-1. Copy and paste the puzzle boards into the `InputBoard()` function in `main.cpp`.
-2. Compile the program with C++11.
-3. Run the compiled version.
+1. Copy and paste the puzzle boards into the `InputBoard()` function in `int main()` at the end of the code.
+2. Compile the program with C++11 `g++ -std=c++11 puzzleSolver.cpp -o puzzleSolver` in terminal.
+3. Run the compiled version. `./puzzleSolver`
 
 ## Example Boards
 
@@ -53,6 +66,7 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 "**804*06*",
 "**9*-12***",
 "00560-42*0"
+```
 
 ### Board 2 (Medium)
 ```plaintext
@@ -65,6 +79,7 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 "07****0**",
 "***-9***30",
 "*9-701***0"
+```
 
 ### Board 3 (Hard)
 ```plaintext
@@ -77,6 +92,6 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 "-30**-4****",
 "0****5***",
 "0**0**50-2"
-
+```
 
 Print statements have been added to showcase the solving process. Use this program to work on solvable boards and understand the solving steps.
