@@ -55,6 +55,7 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 "00560-42*0"
 
 ### Board 2 (Medium)
+```plaintext
 "0***700*1",
 "-5**7*0***",
 "*3-1*****0",
@@ -66,6 +67,7 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 "*9-701***0"
 
 ### Board 3 (Hard)
+```plaintext
 "0-1**90**0",
 "******4*0",
 "***7-54*00",
