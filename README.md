@@ -94,4 +94,4 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 "0**0**50-2"
 ```
 
-Print statements have been added to showcase the solving process. Use this program to work on solvable boards and understand the solving steps.
+Print statements have been added to showcase the solving process. 
