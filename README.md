@@ -6,7 +6,7 @@ This puzzle solver is a C++ program designed to solve a 9x9 puzzle with horizont
 
 ## Puzzle Syntax Explanation
 
-- Minus integers represent black cells with that integer.
+- Negative integers represent black cells with that integer.
 - Asterisk (*) denotes an empty cell, recorded as 99 during solving.
 - Zero (0) represents a black cell with no effect.
 - Compartments are formed by numbers between black cells and 0’s.
